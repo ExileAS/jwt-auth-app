@@ -12,7 +12,7 @@ app.use(cookieParser());
 
 app.set("view engine", "ejs");
 
-const dbURI = "mongodb+srv://ahmed:test12345@cluster0.7djtkun.mongodb.net/";
+const dbURI = process.env.DB_URI
 mongoose
   .connect(dbURI, {
     useNewUrlParser: true,
